@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Core.DataAccess
 {
-    public interface IEntityRepository<T> where T : class, IEntity, new() //referans olan,IEntity'den implemente edilmiş, newlenebilir herşeyi gönderebiliriz demek oluyor.
+    public interface IEntityRepository<T> where T : class, IEntity, new() //referans olan,IEntity'den implemente edilmiş, newlenebilir herşeyi gönderebiliriz demek oluyor. Örneğin Product nesnesini gönderebiliriz.
     {
         //Her türlü parametreyi gönderebilmek için Linq Expression kullandık.
         T Get(Expression<Func<T, bool>> filter);

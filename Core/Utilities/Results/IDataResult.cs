@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Core.Utilities.Results
 {
-    public interface IDataResult<T> : IResult
+    public interface IDataResult<out T> : IResult //out kullanmasaydık da olurdu.
     {
-        T Data { get; }
+        //Gönderilecek data aşağıdaki Data ile döndürülecektir.
+        T Data { get; } 
     }
 }

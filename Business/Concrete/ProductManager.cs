@@ -33,6 +33,7 @@ namespace Business.Concrete
 
         public IDataResult<Product> GetById(int productId)
         {
+            //İşlemin başarılı olacağı durum kabul edilip datanın döndürülmesi sağlandı. Aşağıda "Product data" overloadı kullanıldı.
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
 
