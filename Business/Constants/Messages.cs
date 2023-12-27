@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Business.Constants
 {
+    //Bir kere newlendikten sonra bellekte dursun ve herkes onu kullansın diye 'static' keywordü kullanıldı.
     public static class Messages
     {
         public static string ProductAdded = "Ürün başarıyla eklendi.";
