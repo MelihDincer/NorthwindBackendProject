@@ -22,7 +22,7 @@ namespace Business.Concrete
             _tokenHelper = tokenHelper;
         }
 
-        //Access Token Oluşturma
+        //Access Token Oluşturma -> Frontend'de kayıt olan kişinin, kayıt olduktan ya da login olduktan sonra kullanıcıya token verilecek.
         public IDataResult<AccessToken> CreateAccessToken(User user)
         {
             var claims = _userService.GetClaims(user);
