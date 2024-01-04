@@ -25,7 +25,7 @@ namespace Business.Concrete
 
         //Cross Cutting Concerns - Validation, Cache, Log, Performance, Auth, Transaction
         //AOP - Aspect Oriented Programming
-        [ValidationAspect(typeof(ProductValidator))]
+        [ValidationAspect(typeof(ProductValidator), Priority = 1)]
         public IResult Add(Product product)
         {
             //ValidationTool.Validate(new ProductValidator(), product);
